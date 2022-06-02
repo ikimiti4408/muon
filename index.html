@@ -1,63 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>
-            muon
-        </title>
-        <style>
-            body{
-                margin:0;
-                padding: 0;
-                background-color: black;
-                color:white;
-            }
-            /*
-            audio{
-                display: block;
-                width: 100dw;
-                height: 20vh;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 50px;
-            }*/
-            button{
-                display: block;
-                width: 70vw;
-                height: 40vh;   
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 50px;
-                font-size: xx-large;
-                background: grey;
-                color: white;
-            }
-            h1{
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <script type="text/javascript">
-            function change_mode(){
-                var b = document.getElementById("b");
-                var c = document.getElementById("c");
-                //const b = document.querySelector("#b");
-                if(b.paused){
-                    b.play();
-                    c.textContent = "ON";
-                    c.style.background = 'lightgreen';
-                    c.style.color = 'black';
-                }else{
-                    b.pause();
-                    c.textContent = "OFF";
-                    c.style.background = 'gray';
-                    c.style.color = 'white';
-                }
-            }
-        </script>
-        <h1>muon</h1>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        muon
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li class="icon">
+                muon
+            </li>
+            <li>
+                オフライン版
+            </li>
+            <li>
+                MP3
+            </li>
+            <li>
+                ヘルプ
+            </li>
+        </ul>
+    </header>
+    <main>
+        <noscript>
+            <audio src="nosound.mp3" loop controls></audio><br>
+            javascriptが無効のため、下のボタンが動作しません。<br>
+            上のブラウザ標準コントローラーをご利用ください。<br>
+            もしくは<a href="nosound.mp3">こちら</a>からMP3にアクセスできます。
+        </noscript>
         <audio src="nosound.mp3" loop id="b"></audio>
         <button onclick="change_mode()" id="c">OFF</button>
-    </body>
+    </main>
+    <footer>
+        Copyright &copy; 2022 ikimiti4408
+    </footer>
+    <script src="script.js"></script>
+</body>
+
 </html>

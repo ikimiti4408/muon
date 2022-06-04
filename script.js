@@ -1,5 +1,5 @@
 //basic_data
-const ver = "0.1.1a";
+const ver = "0.2.1a";
 const APP_URL = "https://ikimiti4408.github.io/noumm/"
 const OFFLINE_URL = "https://github.com/ikimiti4408/noumm/tree/main/offline"
 let online = true;

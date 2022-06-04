@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        muon
+        noUmm
     </title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,31 +13,35 @@
     <header>
         <ul>
             <li class="icon">
-                muon
+                <a href="index.html">noUmm</a>
             </li>
             <li>
-                オフライン版
+                <a href="https://github.com/ikimiti4408/noumm/" class="online">ソースコード</a>
             </li>
             <li>
-                MP3
+                <a href="nosound.mp3">MP3の入手</a>
             </li>
             <li>
-                ヘルプ
+                <a href="help.html">ヘルプ</a>
             </li>
         </ul>
     </header>
     <main>
         <noscript>
-            <audio src="nosound.mp3" loop controls></audio><br>
-            javascriptが無効のため、下のボタンが動作しません。<br>
-            上のブラウザ標準コントローラーをご利用ください。<br>
-            もしくは<a href="nosound.mp3">こちら</a>からMP3にアクセスできます。
+            <div class="noscript">
+                <audio src="nosound.mp3" loop controls></audio><br>
+                javascriptが無効のため、下のボタンが動作しません。<br>
+                上のブラウザ標準コントローラーをご利用ください。<br>
+                もしくは上部からMP3を入手できます。<br>
+                キャッシュの削除が必要な場合があります。
+            </div>
         </noscript>
         <audio src="nosound.mp3" loop id="b"></audio>
         <button onclick="change_mode()" id="c">OFF</button>
     </main>
     <footer>
-        Copyright &copy; 2022 ikimiti4408
+        <span class="online"></span>
+        noUmm&nbsp;Ver.<span class="ver">(unloaded)</span>&emsp;Copyright &copy; 2022 ikimiti4408
     </footer>
     <script src="script.js"></script>
 </body>
